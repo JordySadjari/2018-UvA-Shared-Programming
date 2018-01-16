@@ -1,0 +1,89 @@
+* {
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+    border:0;
+    background: #ffffff;
+    color: #323232;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14pt;
+    line-height:23pt;
+    /* So that there's always a scrollbar, so the pages don't jump if you
+     * go from one page to the next. 
+     */
+    height: 100%;
+    margin-bottom: 1px;
+}
+
+.button-top, .button-bottom, .button-left, .button-right {
+}
+
+.button-top:hover, .button-bottom:hover, .button-left:hover, .button-right:hover {
+}
+
+
+.button-top, .button-bottom, .button-left, .button-right {
+  width:12vw;
+  height:12vw;
+  border-radius:6vw;
+  background-color:#a0a0a0; 
+  position:fixed;
+  font-size:4vw;
+  color:#ffffff;
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+  filter: alpha(opacity=25);
+  -moz-opacity: 0.25;
+  -khtml-opacity: 0.25;
+  opacity: 0.25;
+}
+
+.button-top {
+  position:fixed;
+  top:-6vw;
+  left:44vw; 
+  text-align:center;
+  padding-top: 8vw;
+}
+
+.button-bottom {
+  position:fixed;
+  top:calc( 100vh - 6vw );
+  left:44vw; 
+  text-align:center;
+  padding-top: 2vw;
+}
+
+.button-left {
+  position:fixed;
+  top:calc( 50vh - 6vw );
+  left:-6vw; 
+  text-align:center;
+  padding-top: 5vw;
+  padding-left:6vw;
+}
+
+.button-right {
+  position:fixed;
+  top:calc( 50vh - 6vw );
+  left:93vw; 
+  text-align:center;
+  padding-top: 5vw;
+  padding-right:6vw;
+}
+
+a {
+    text-decoration:none;
+    color:#ffffff;
+}
+
+a:hover {
+    color:#e0e0e0;
+}
