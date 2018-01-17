@@ -42,16 +42,6 @@ for (i = 0; i &lt;= 10; i++) {
 }
 </pre>
 
-    <script>
-
-var code = localStorage.getItem("editorText01");
-if (code != null) {
-    code=unescape(code);
-    editor.setValue(code);
-}
-
-    </script>
-
 
 
 <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
@@ -59,6 +49,14 @@ if (code != null) {
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/twilight");
     editor.session.setMode("ace/mode/javascript");
+
+    var code = localStorage.getItem("editorText01");
+    if (code != null) {
+	code=unescape(code);
+	editor.setValue(code,-1);
+    }
+
+
 </script>
 
         <div class="button-top"><a href='DrawingTools-CodeEditor.html'>&uarr;</a></div>
