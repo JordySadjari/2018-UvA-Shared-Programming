@@ -23,12 +23,13 @@
 </style>
 
 <script>
-function codePreview() {
+function switchTo(newPage) {
     var code = editor.getValue();
     code = escape(code);
     localStorage.setItem("editorText01", code);
-    location.replace('CodePreview.html');
+    location.replace(newPage);
 }
+
 </script>
 
     </head>
@@ -58,10 +59,10 @@ for (i = 0; i &lt;= 10; i++) {
 
 </script>
 
-        <div class="button-top"><a href='DrawingTools-CodeEditor.html'>&uarr;</a></div>
-        <div class="button-bottom"><a href='javascript:codePreview();'>&darr;</a></div>
-        <div class="button-left"><a href='VersionControl.html'>&larr;</a></div>
-        <div class="button-right"><a href='DrawingBoard.html'>&rarr;</a></div>
+        <div class="button-top"><a href='javascript:switchTo("DrawingTools-CodeEditor.html");'>&uarr;</a></div>
+        <div class="button-bottom"><a href='javascript:switchTo("CodePreview.html");'>&darr;</a></div>
+        <div class="button-left"><a href='javascript:switchTo("VersionControl.html");'>&larr;</a></div>
+        <div class="button-right"><a href='javascript:switchTo("DrawingBoard.html");'>&rarr;</a></div>
 
 
     </body>
