@@ -5,13 +5,26 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="sharedprogramming.css" />
+
+
+
     </head>
     <body>
-        <div class="button-top"><a href='CodeEditor.html'>&uarr;</a></div>
-
-<center>
-<h1>Code Preview</h1>
-</center>
-
+        <div class="button-top" ><a href='CodeEditor.html'>&uarr;</a></div>
+        <div id="runcode" style="position:fixed; top:6vw;">
+	</div>
     </body>
+
+
+    <script>
+var code = unescape(localStorage.getItem("editorText01"));
+
+var s = document.createElement('script');
+s.textContent = code;
+s.onload = function() {
+    this.remove();
+};
+document.getElementById("runcode").appendChild(s);
+    </script>
+
 </html>

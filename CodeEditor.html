@@ -21,17 +21,37 @@
         right: 6vw;
     }
 </style>
-  
+
+<script>
+function codePreview() {
+    var code = editor.getValue();
+    code = escape(code);
+    localStorage.setItem("editorText01", code);
+    location.replace('CodePreview.html');
+}
+</script>
 
     </head>
     <body>
 
-<pre id="editor">function foo(items) {
-    var i;
-    for (i = 0; i &lt; items.length; i++) {
-        alert("Ace Rocks " + items[i]);
-    }
-}</pre>
+<pre id="editor">
+var i;
+for (i = 0; i &lt;= 10; i++) {
+    document.write("5 x "+i+ " = " + (5*i)+"&lt;br&gt;" );
+}
+</pre>
+
+    <script>
+
+var code = localStorage.getItem("editorText01");
+if (code != null) {
+    code=unescape(code);
+    editor.setValue(code);
+}
+
+    </script>
+
+
 
 <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
@@ -41,7 +61,7 @@
 </script>
 
         <div class="button-top"><a href='DrawingTools-CodeEditor.html'>&uarr;</a></div>
-        <div class="button-bottom"><a href='CodePreview.html'>&darr;</a></div>
+        <div class="button-bottom"><a href='javascript:codePreview();'>&darr;</a></div>
         <div class="button-left"><a href='VersionControl.html'>&larr;</a></div>
         <div class="button-right"><a href='DrawingBoard.html'>&rarr;</a></div>
 
