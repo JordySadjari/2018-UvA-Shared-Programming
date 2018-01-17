@@ -42,6 +42,10 @@ ul li {
   margin: 0 5px 10px;
 }
 
+.black {
+  background: #000000;
+}
+
 .red {
   background: #fc4c4f;
 }
@@ -53,6 +57,15 @@ ul li {
 .yellow {
   background: #ECD13F;
 }
+
+.green {
+  background: #4ffca3;
+}
+
+.purple {
+  background: #fc4ffc;
+}
+
 
 .selected {
   border: 7px solid #fff;
@@ -145,4 +158,8 @@ button {
   margin: 10px -10px -7px;
   padding: 5px 10px;
   width: 325px;
+}
+
+#drawing-canvas{
+    background:transparent;
 }

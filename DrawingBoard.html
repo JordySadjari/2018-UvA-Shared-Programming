@@ -8,21 +8,27 @@
         <link rel="stylesheet" href="drawingtool.css" />
     </head>
     <body>
+
+<div id='ten-vwh' style='width: 10vw; height: 10vh; left: -100%; position: absolute; top: -100%; '></div>
+
         <div class="button-left"><a href='CodeEditor.html'>&rarr;</a></div>
         <div class="button-top"><a href='DrawingTools-DrawingBoard.html'>&uarr;</a></div>
-
 <center>
 <h1>Drawing Board</h1>
 </center>
 
 
- <canvas width="600" height="400"></canvas>
+  <canvas id="drawing-canvas" width='600' height='400'></canvas>
   <div class="controls">
     <ul>
-      <li class="red selected"></li>
+      <li class="black selected"></li>
+      <li class="red"></li>
       <li class="blue"></li>
+      <li class="green"></li>
       <li class="yellow"></li>
+      <li class="purple"></li>
     </ul>
+<!--
     <button id="revealColorSelect">New Color</button>
     <div id="colorSelect">
       <span id="newColor"></span>
@@ -44,6 +50,7 @@
         <button id="addNewColor">Add Color</button>
       </div>
     </div>
+--!>
   </div>
 
 

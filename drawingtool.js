@@ -56,6 +56,7 @@ $canvas.mousedown(function(e) {
     context.moveTo(lastEvent.offsetX, lastEvent.offsetY);
     context.lineTo(e.offsetX, e.offsetY);
     context.strokeStyle = color;
+    context.lineWidth = 4;
     context.stroke();
     lastEvent = e;
   }
@@ -64,3 +65,30 @@ $canvas.mousedown(function(e) {
 }).mouseleave(function() {
   $canvas.mouseup();
 });
+
+
+
+
+
+var prev_onload_drawingboard = window.onload;
+window.onload = onload_drawingboard;
+function onload_drawingboard()
+{
+    if (prev_onload_drawingboard) {
+	prev_onload_drawingboard();
+    }
+
+    var devicePixelRatio = window.devicePixelRatio || 1;
+    var vw10 = Math.round(document.getElementById('ten-vwh').offsetWidth * devicePixelRatio);
+    var vh10 = Math.round(document.getElementById('ten-vwh').offsetHeight * devicePixelRatio);
+
+    var canvasWidthPixels = Math.floor((vw10*92.0)/10.0);
+    var canvasHeightPixels = Math.floor((vh10*64.0)/10.0);
+
+    var element = document.getElementById("drawing-canvas");
+    if (element) {
+        element.setAttribute("width",""+canvasWidthPixels);
+        element.setAttribute("height",""+canvasHeightPixels);
+    } 
+}
+

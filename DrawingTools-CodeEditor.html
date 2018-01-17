@@ -8,19 +8,26 @@
         <link rel="stylesheet" href="drawingtool.css" />
     </head>
     <body>
+
+<div id='ten-vwh' style='width: 10vw; height: 10vh; left: -100%; position: absolute; top: -100%; '></div>
+
         <div class="button-bottom"><a href='CodeEditor.html'>&darr;</a></div>
 <center>
 <h1>Drawing Tools - Code Editor</h1>
 </center>
 
 
- <canvas width="600" height="400"></canvas>
+  <canvas id="drawing-canvas" width='600' height='400'></canvas>
   <div class="controls">
     <ul>
-      <li class="red selected"></li>
+      <li class="black selected"></li>
+      <li class="red"></li>
       <li class="blue"></li>
+      <li class="green"></li>
       <li class="yellow"></li>
+      <li class="purple"></li>
     </ul>
+<!--
     <button id="revealColorSelect">New Color</button>
     <div id="colorSelect">
       <span id="newColor"></span>
@@ -42,10 +49,8 @@
         <button id="addNewColor">Add Color</button>
       </div>
     </div>
+--!>
   </div>
-
-
-
     </body>
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src="drawingtool.js" type="text/javascript" ></script>
