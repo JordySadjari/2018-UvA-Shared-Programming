@@ -6,16 +6,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="sharedprogramming.css" />
         <link rel="stylesheet" href="drawingtool.css" />
+
+<style type="text/css" media="screen">
+    body {
+    }
+    #editor {
+        margin: 0;
+        position: absolute;
+        top: 8vw;
+        bottom: 6vw;
+        left: 6vw;
+        right: 6vw;
+        font-size:24pt;
+
+        pointer-events: none;
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        user-select: none;          /* Likely future */      
+
+
+    }
+</style>
+
+
     </head>
     <body>
 
-<div id='ten-vwh' style='width: 10vw; height: 10vh; left: -100%; position: absolute; top: -100%; '></div>
-
-        <div class="button-bottom"><a href='CodeEditor.html'>&darr;</a></div>
 <center>
 <h1>Drawing Tools - Code Editor</h1>
 </center>
 
+
+<pre id="editor">
+var i;
+for (i = 0; i &lt;= 10; i++) {
+    document.write("5 x "+i+ " = " + (5*i)+"&lt;br&gt;" );
+}
+</pre>
+
+<script>
+
+    var code = localStorage.getItem("editorText01");
+    if (code != null) {
+	code=unescape(code);
+	document.getElementById("editor").innerHTML = code.replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    }
+</script>
+
+
+
+<div id='ten-vwh' style='width: 10vw; height: 10vh; left: -100%; position: absolute; top: -100%; '></div>
+
+        <div class="button-bottom"><a href='CodeEditor.html'>&darr;</a></div>
 
   <canvas id="drawing-canvas" width='600' height='400'></canvas>
   <div class="controls">
